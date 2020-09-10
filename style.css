@@ -24,8 +24,8 @@ form {
 }
 
 form input {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -42,6 +42,9 @@ form button {
     background: white;
     cursor: pointer;
     transition: all 0.4s ease;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
 form button:hover {
@@ -76,6 +79,7 @@ form button:hover {
     align-items: center;
     background: transparent;
     padding: 0.5rem;
+    transition: all 0.5s ease;
 }
 
 .todo li {
@@ -83,7 +87,7 @@ form button:hover {
     background: transparent;
 }
 
-.check-btn {
+.complete-btn {
     color: green;
 
 }
@@ -92,7 +96,7 @@ form button:hover {
     color: red;
 }
 
-.check-btn,
+.complete-btn,
 .delete-btn {
     background: transparent;
     padding: 1rem;
@@ -109,4 +113,51 @@ form button:hover {
 .fa-trash,
 .fa-check {
     pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.deleted {
+    transform: translateY(8rem)rotateZ(30deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #2BECD7;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #2BECD7;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #2BECD7;
 }
