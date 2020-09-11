@@ -68,7 +68,7 @@ form button:hover {
     border-top-right-radius: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
+    margin-bottom: 5rem;
 }
 
 .todo {
@@ -144,6 +144,8 @@ select {
     width: 10rem;
     cursor: pointer;
     padding: 0.8rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .select::after {
