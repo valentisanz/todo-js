@@ -165,10 +165,10 @@ function deleteLocalTodos(todo) {
         todos = JSON.parse(localStorage.getItem('todos'))
     }
     const todoValue = todo.children[0].innerText
-    /*todos.forEach((todo, index) => {
+    todos.forEach((todo, index) => {
         if (todo.title === todoValue) {
             todos.splice(index, 1)
             localStorage.setItem('todos', JSON.stringify(todos))
         }
-    })*/
+    })
 }
